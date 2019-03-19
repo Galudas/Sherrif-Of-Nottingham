@@ -1,0 +1,7 @@
+Starting audit...
+[ERROR] /home/andrei/IdeaProjects/TEMAPOOOOOOO/src/mechanics/GiveCards.java:34:37: Parameter cardToAdd should be final. [FinalParameters]
+[ERROR] /home/andrei/IdeaProjects/TEMAPOOOOOOO/src/mechanics/EliminateAndSearch.java:14:36: Parameter howManyTimes should be final. [FinalParameters]
+[ERROR] /home/andrei/IdeaProjects/TEMAPOOOOOOO/src/mechanics/EliminateAndSearch.java:32:5: Class 'EliminateAndSearch' looks like designed for extension (can be subclassed), but the method 'eliminateUsedCards' does not have javadoc that explains how to do that safely. If class is not designed for extension consider making the class 'EliminateAndSearch' final or making the method 'eliminateUsedCards' static/final/abstract/empty, or adding allowed annotation for the method. [DesignForExtension]
+[ERROR] /home/andrei/IdeaProjects/TEMAPOOOOOOO/src/stategy/BasicStategy.java:158:69: 'sack' hides a field. [HiddenField]
+Audit done.
+Checkstyle ends with 4 errors.

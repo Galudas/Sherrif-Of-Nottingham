@@ -1,0 +1,47 @@
+README TEMA POO 1
+	assets: 
+		GetAsset:
+			-CardType = metoda primeste ca parametru un numar si va intoarce cartea corespunzatoare;	
+		IlleGalGoods:
+			-baza de date cu bunurile ilegale;
+		LegalGoods:
+			-baza de date cu bunurile legale;
+	main:
+		GameInput:
+			-schelet;
+		Main:
+			-in main se va apela functia "PlayTheCards" intorcand un vector de tip "Player" in care se vor regasi in var "MyCards", toate cartile cu care fiecare player a reusit sa treaca 
+	mechanics:
+		AssaignPlayerInfo: 
+			-Atribuie fiecarui player diferite informatii
+		EliminateAndSearch: 
+			-eliminateUsedCards(final Integer toEliminate, final ArrayList<Integer> cards,
+                                Integer howManyTimes) = va elimina toate cartile folosite de un player intr-o runda;
+			-eliminateUsedCards(final ArrayList<Integer> list, final Map<Integer,
+            			Integer> toRemove) = va elimina toate cartile folosite dintr-un vector de cartifolosite;
+		FIndSerif:
+			 -gaseste seriful din runda respectiva
+		GiveCards:
+			-GiveFirstSetOfCards = va imparti primul set de carti catre players;
+			-GiveMoreCards = va da mai multe carti catre players la finalul fiecarei runde
+		InitPlayer:
+			-initPlayer = atribuie fiecarui player o strategie pe care trebuie sa o joace;
+		PlayTheCards:
+			-Aici se vor juca cartile,iar la final bunurile ilegale vor fi inlocuite cu bonusurile de rigoare.
+			NOTA: Se creaza si o matrice "table" in care sunt stocate castigurile (ca numar) al playerilor per fiecare resursa. Se va folosi la calcularea bonusului de King si de Queen
+		ScoreCalculator:
+			-se calculeaza scorul playerilor
+		SetConfiscated:
+			-se vor seta cartile confiscate pe null
+	player:
+		Player:
+			-checkSack = aici am facut metoda de serif,care va fi apelata doar atunci cand playerul respectiv este serif
+			-partition si sort = quick sort pentru rezultattele finale;
+			-makediff = face diferenta dintre 2 multimi
+			-common = face intersectia intre 2 multimi
+			-addinMycards = adauga carti castigate de un player in runda respectiva 
+	strategy:
+		Fiecare strategie contine un ActualSackDeclared si un sackDeclared pe care seriful le va verifica in vederea stabilirii daca un player a mintit sau nu.De asemenea fiecare strategie are cate o functie createSack care creeaza efectiv sacul.
+		Se regasesc metode care :verifica daca sunt numai carti ilegale(onlyIlega), frecventa cartilor din mana(cardsFrequency), cartea ilegala cu cel mai mare profit(TheMostValuableIllegalCard) etc.
+		Strategy: Interfata ce impune o anumita structura pentru fiecare strategie 
+
