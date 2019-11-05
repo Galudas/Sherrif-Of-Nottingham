@@ -1,4 +1,4 @@
-README TEMA POO 1
+README
 	assets: 
 		GetAsset:
 			-CardType = metoda primeste ca parametru un numar si va intoarce cartea corespunzatoare;	
